@@ -1,0 +1,44 @@
+01/12/2016 03:18:30 PM
+Category=14339
+CategoryString=Kerberos Authentication Service
+EventCode=4771
+EventIdentifier=4771
+EventType=5
+Logfile=Security
+RecordNumber=2097528975
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=@@time@@
+TimeWritten=@@time@@
+Type=Audit Failure
+User=@@user@@
+ComputerName=@@host@@
+OriginalComputerName=@@host@@.splunk.local
+wmi_type=WinEventLog:Security
+Message=Kerberos pre-authentication failed.
+
+Account Information:
+	Security ID:		S-1-5-21-57989841-920026266-725345543-500
+	Account Name:		@@user@@
+
+Service Information:
+	Service Name:		krbtgt/SPLUNK.LOCAL
+
+Network Information:
+	Client Address:		@@user_ip@@
+	Client Port:		6502
+
+Additional Information:
+	Ticket Options:		0x10
+	Failure Code:		0x18
+	Pre-Authentication Type:	2
+
+Certificate Information:
+	Certificate Issuer Name:		
+	Certificate Serial Number: 	
+	Certificate Thumbprint:		
+
+Certificate information is only provided if a certificate was used for pre-authentication.
+
+Pre-authentication types, ticket options and failure codes are defined in RFC 4120.
+
+If the ticket was malformed or damaged during transit and could not be decrypted, then many fields in this event might not be present.

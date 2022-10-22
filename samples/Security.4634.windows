@@ -1,0 +1,27 @@
+01/12/2016 06:40:38 PM
+Category=12545
+CategoryString=Logoff
+EventCode=4634
+EventIdentifier=4634
+EventType=4
+Logfile=Security
+RecordNumber=321646247
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=@@time@@
+TimeWritten=@@time@@
+Type=Audit Success
+User=@@user@@
+ComputerName=@@host@@
+OriginalComputerName=@@host@@.splunk.local
+wmi_type=WinEventLog:Security
+Message=An account was logged off.
+
+Subject:
+	Security ID:		S-1-5-21-57989841-920026266-725345543-500
+	Account Name:		@@user@@$
+	Account Domain:		SPLUNK
+	Logon ID:		0x10c662180
+
+Logon Type:			3
+
+This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.

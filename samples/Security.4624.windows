@@ -1,0 +1,68 @@
+01/12/2016 06:40:38 PM
+Category=12544
+CategoryString=Logon
+EventCode=4624
+EventIdentifier=4624
+EventType=4
+Logfile=Security
+RecordNumber=77120989
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=@@time@@
+TimeWritten=@@time@@
+Type=Audit Success
+User=@@user@@
+ComputerName=@@host@@
+OriginalComputerName=@@host@@.sv.splunk.com
+wmi_type=WinEventLog:Security
+Message=An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		S-1-5-21-57989841-920026266-725345543-500
+	Account Name:		@@user_comp@@$
+	Account Domain:		SPLUNK
+	Logon ID:		0x0
+	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+	Process ID:		0x0
+	Process Name:	-
+
+Network Information:
+	Workstation Name:	@@user_comp@@
+	Source Network Address:	@@user_ip@@
+	Source Port:		@@port@@
+
+Detailed Authentication Information:
+	Logon Process:		Kerberos  
+	Authentication Package:	Kerberos
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.

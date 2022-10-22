@@ -1,0 +1,22 @@
+01/12/2016 06:40:38 PM
+Category=14336
+CategoryString=Credential Validation
+EventCode=4776
+EventIdentifier=4776
+EventType=4
+Logfile=Security
+RecordNumber=591713143
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=@@time@@
+TimeWritten=@@time@@
+Type=Audit Success
+User=@@user@@
+ComputerName=@@host@@
+OriginalComputerName=@@host@@.sv.splunk.com
+wmi_type=WinEventLog:Security
+Message=The computer attempted to validate the credentials for an account.
+
+Authentication Package:	MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Logon Account:	@@user@@
+Source Workstation:	@@user_comp@@
+Error Code:	0x0

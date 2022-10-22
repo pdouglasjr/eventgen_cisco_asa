@@ -1,0 +1,34 @@
+01/12/2016 03:18:30 PM
+Category=12810
+CategoryString=Filtering Platform Connection
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=292586736
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=@@time@@
+TimeWritten=@@time@@
+Type=Audit Success
+User=@@user@@
+ComputerName=@@host@@
+OriginalComputerName=@@host@@.pexch111.serverpod.net
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+Application Information:
+	Process ID:		464
+	Application Name:	\device\harddiskvolume2\windows\system32\lsass.exe
+
+Network Information:
+	Direction:		Inbound
+	Source Address:		10.216.185.9
+	Source Port:		389
+	Destination Address:	@@user_ip@@
+	Destination Port:		54485
+	Protocol:		6
+
+Filter Information:
+	Filter Run-Time ID:	0
+	Layer Name:		Receive/Accept
+	Layer Run-Time ID:	44

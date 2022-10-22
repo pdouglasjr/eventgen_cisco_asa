@@ -1,0 +1,2 @@
+@@time@@: %ASA-6-302013: Built inbound TCP connection @@randint@@ for outside:@@external_ip@@/@@port1@@ (@@external_ip@@/@@port1@@) to inside:@@user_ip@@/80 (@@user_ip@@/80)
+@@time@@: %ASA-6-302014: Teardown TCP connection @@randint@@ for outside:@@external_ip@@/@@port1@@ to inside:@@user_ip@@/80 duration 0:00:0@@rand_duration@@ bytes @@rand_bytes@@ TCP Reset-O
